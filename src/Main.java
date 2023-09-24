@@ -1,17 +1,29 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create a Scanner object to get user input
+        Scanner in = new Scanner(System.in);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // Display a menu and prompt the user for their choice
+        System.out.println("Select your party affiliation:");
+        System.out.println("D - Democrat");
+        System.out.println("R - Republican");
+        System.out.println("I - Independent");
+        System.out.print("Enter your choice: ");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        // Read the user's choice as a string
+        String choice = in.nextLine();
+
+        // Use of a cascaded if-else structure to determine the response
+        if (choice.equalsIgnoreCase("D")) {
+            System.out.println("You get a Democratic Donkey.");
+        } else if (choice.equalsIgnoreCase("R")) {
+            System.out.println("You get a Republican Elephant.");
+        } else if (choice.equalsIgnoreCase("I")) {
+            System.out.println("You are an Independent Person.");
+        } else {
+            System.out.println("You selected 'Other'.");
         }
     }
 }
